@@ -1,0 +1,9 @@
+# Visual Studio User Preference
+gam200_altf4/gam200_altf4.vcxproj.user
+
+# Visual Studio File Directories
+.vs
+.tmp
+
+# Build File Directories
+bin

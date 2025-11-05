@@ -1,0 +1,581 @@
+﻿  glapp.cpp
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\SeamCarving\glapp.hpp(5,39): error C2039: 'string': is not a member of 'std'
+  (compiling source file 'glapp.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\SeamCarving\predefined C++ types (compiler internal)(357,11):
+      see declaration of 'std'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\SeamCarving\glapp.hpp(5,39): error C2061: syntax error: identifier 'string'
+  (compiling source file 'glapp.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\SeamCarving\glapp.hpp(11,15): error C2143: syntax error: missing ';' before '*'
+  (compiling source file 'glapp.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\SeamCarving\glapp.hpp(11,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'glapp.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\SeamCarving\glapp.hpp(11,23): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'glapp.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(31,9): warning C4005: 'IMGUI_VERSION': macro redefinition
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(31,9):
+      see previous definition of 'IMGUI_VERSION'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(32,9): warning C4005: 'IMGUI_VERSION_NUM': macro redefinition
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(32,9):
+      see previous definition of 'IMGUI_VERSION_NUM'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(258,15): error C2040: 'ImTextureID': 'void *' differs in levels of indirection from 'ImU64'
+  (compiling source file 'glapp.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(293,8): error C2011: 'ImVec2': 'struct' type redefinition
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(306,8): error C2011: 'ImVec4': 'struct' type redefinition
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(307,8):
+      see declaration of 'ImVec4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(328,76): error C2572: 'ImGui::CreateContext': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(329,29):
+      see declaration of 'ImGui::CreateContext'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(329,64): error C2572: 'ImGui::DestroyContext': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(330,29):
+      see declaration of 'ImGui::DestroyContext'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(343,59): error C2572: 'ImGui::ShowDemoWindow': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(344,29):
+      see declaration of 'ImGui::ShowDemoWindow'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(344,62): error C2572: 'ImGui::ShowMetricsWindow': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(345,29):
+      see declaration of 'ImGui::ShowMetricsWindow'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(345,63): error C2572: 'ImGui::ShowDebugLogWindow': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(346,29):
+      see declaration of 'ImGui::ShowDebugLogWindow'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(346,66): error C2572: 'ImGui::ShowIDStackToolWindow': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(347,29):
+      see declaration of 'ImGui::ShowIDStackToolWindow'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(347,60): error C2572: 'ImGui::ShowAboutWindow': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(348,29):
+      see declaration of 'ImGui::ShowAboutWindow'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(348,63): error C2572: 'ImGui::ShowStyleEditor': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(349,29):
+      see declaration of 'ImGui::ShowStyleEditor'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(355,63): error C2572: 'ImGui::StyleColorsDark': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(356,29):
+      see declaration of 'ImGui::StyleColorsDark'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(356,64): error C2572: 'ImGui::StyleColorsLight': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(357,29):
+      see declaration of 'ImGui::StyleColorsLight'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(357,66): error C2572: 'ImGui::StyleColorsClassic': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(358,29):
+      see declaration of 'ImGui::StyleColorsClassic'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(371,68): error C2572: 'ImGui::Begin': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(372,29):
+      see declaration of 'ImGui::Begin'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(371,99): error C2572: 'ImGui::Begin': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(372,29):
+      see declaration of 'ImGui::Begin'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(392,87): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(392,125): error C2572: 'ImGui::BeginChild': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(393,29):
+      see declaration of 'ImGui::BeginChild'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(392,160): error C2572: 'ImGui::BeginChild': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(393,29):
+      see declaration of 'ImGui::BeginChild'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(393,79): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(393,117): error C2572: 'ImGui::BeginChild': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(394,29):
+      see declaration of 'ImGui::BeginChild'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(393,152): error C2572: 'ImGui::BeginChild': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(394,29):
+      see declaration of 'ImGui::BeginChild'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(400,69): error C2572: 'ImGui::IsWindowFocused': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(401,29):
+      see declaration of 'ImGui::IsWindowFocused'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(401,69): error C2572: 'ImGui::IsWindowHovered': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(402,29):
+      see declaration of 'ImGui::IsWindowHovered'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(412,113): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(412,82): error C2572: 'ImGui::SetNextWindowPos': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(411,29):
+      see declaration of 'ImGui::SetNextWindowPos'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(413,84): error C2572: 'ImGui::SetNextWindowSize': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(412,29):
+      see declaration of 'ImGui::SetNextWindowSize'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(414,142): error C2572: 'ImGui::SetNextWindowSizeConstraints': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(413,29):
+      see declaration of 'ImGui::SetNextWindowSizeConstraints'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(414,177): error C2572: 'ImGui::SetNextWindowSizeConstraints': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(413,29):
+      see declaration of 'ImGui::SetNextWindowSizeConstraints'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(416,85): error C2572: 'ImGui::SetNextWindowCollapsed': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(415,29):
+      see declaration of 'ImGui::SetNextWindowCollapsed'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(421,78): error C2572: 'ImGui::SetWindowPos': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(419,29):
+      see declaration of 'ImGui::SetWindowPos'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(422,80): error C2572: 'ImGui::SetWindowSize': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(420,29):
+      see declaration of 'ImGui::SetWindowSize'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(423,81): error C2572: 'ImGui::SetWindowCollapsed': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(421,29):
+      see declaration of 'ImGui::SetWindowCollapsed'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(426,96): error C2572: 'ImGui::SetWindowPos': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(424,29):
+      see declaration of 'ImGui::SetWindowPos'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(427,98): error C2572: 'ImGui::SetWindowSize': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(425,29):
+      see declaration of 'ImGui::SetWindowSize'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(428,99): error C2572: 'ImGui::SetWindowCollapsed': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(426,29):
+      see declaration of 'ImGui::SetWindowCollapsed'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(440,67): error C2572: 'ImGui::SetScrollHereX': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(438,29):
+      see declaration of 'ImGui::SetScrollHereX'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(441,67): error C2572: 'ImGui::SetScrollHereY': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(439,29):
+      see declaration of 'ImGui::SetScrollHereY'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(442,85): error C2572: 'ImGui::SetScrollFromPosX': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(440,29):
+      see declaration of 'ImGui::SetScrollFromPosX'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(443,85): error C2572: 'ImGui::SetScrollFromPosY': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(441,29):
+      see declaration of 'ImGui::SetScrollFromPosY'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(450,55): error C2572: 'ImGui::PopStyleColor': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(448,29):
+      see declaration of 'ImGui::PopStyleColor'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(455,53): error C2572: 'ImGui::PopStyleVar': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(453,29):
+      see declaration of 'ImGui::PopStyleVar'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(464,70): error C2572: 'ImGui::PushTextWrapPos': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(462,29):
+      see declaration of 'ImGui::PushTextWrapPos'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(472,73): error C2572: 'ImGui::GetColorU32': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(470,29):
+      see declaration of 'ImGui::GetColorU32'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(474,70): error C2572: 'ImGui::GetColorU32': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(472,29):
+      see declaration of 'ImGui::GetColorU32'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(500,64): error C2572: 'ImGui::SameLine': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(498,29):
+      see declaration of 'ImGui::SameLine'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(500,84): error C2572: 'ImGui::SameLine': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(498,29):
+      see declaration of 'ImGui::SameLine'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(504,53): error C2572: 'ImGui::Indent': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(502,29):
+      see declaration of 'ImGui::Indent'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(505,55): error C2572: 'ImGui::Unindent': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(503,29):
+      see declaration of 'ImGui::Unindent'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(536,86): error C2572: 'ImGui::TextUnformatted': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(534,29):
+      see declaration of 'ImGui::TextUnformatted'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(554,82): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(556,110): error C2572: 'ImGui::InvisibleButton': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(554,29):
+      see declaration of 'ImGui::InvisibleButton'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(563,88): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(563,125): error C2572: 'ImGui::ProgressBar': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(561,29):
+      see declaration of 'ImGui::ProgressBar'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(566,82): error C2572: 'ImGui::TextLinkOpenURL': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(564,29):
+      see declaration of 'ImGui::TextLinkOpenURL'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(572,116): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(572,150): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(572,189): error C2027: use of undefined type 'ImVec4'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(307,8):
+      see declaration of 'ImVec4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(572,236): error C2027: use of undefined type 'ImVec4'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(307,8):
+      see declaration of 'ImVec4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(573,142): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(573,176): error C2027: use of undefined type 'ImVec2'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(294,8):
+      see declaration of 'ImVec2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(573,213): error C2027: use of undefined type 'ImVec4'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(307,8):
+      see declaration of 'ImVec4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(573,258): error C2027: use of undefined type 'ImVec4'
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(307,8):
+      see declaration of 'ImVec4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(578,110): error C2572: 'ImGui::BeginCombo': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(578,29):
+      see declaration of 'ImGui::BeginCombo'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(580,149): error C2572: 'ImGui::Combo': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(580,29):
+      see declaration of 'ImGui::Combo'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(581,143): error C2572: 'ImGui::Combo': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(581,29):
+      see declaration of 'ImGui::Combo'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(582,188): error C2572: 'ImGui::Combo': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(582,29):
+      see declaration of 'ImGui::Combo'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(596,84): error C2572: 'ImGui::DragFloat': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(596,29):
+      see declaration of 'ImGui::DragFloat'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(596,104): error C2572: 'ImGui::DragFloat': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(596,29):
+      see declaration of 'ImGui::DragFloat'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(596,124): error C2572: 'ImGui::DragFloat': redefinition of default argument: parameter 3
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(596,29):
+      see declaration of 'ImGui::DragFloat'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(596,151): error C2572: 'ImGui::DragFloat': redefinition of default argument: parameter 4
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(596,29):
+      see declaration of 'ImGui::DragFloat'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(596,184): error C2572: 'ImGui::DragFloat': redefinition of default argument: parameter 5
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(596,29):
+      see declaration of 'ImGui::DragFloat'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(597,87): error C2572: 'ImGui::DragFloat2': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(597,29):
+      see declaration of 'ImGui::DragFloat2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(597,107): error C2572: 'ImGui::DragFloat2': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(597,29):
+      see declaration of 'ImGui::DragFloat2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(597,127): error C2572: 'ImGui::DragFloat2': redefinition of default argument: parameter 3
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(597,29):
+      see declaration of 'ImGui::DragFloat2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(597,154): error C2572: 'ImGui::DragFloat2': redefinition of default argument: parameter 4
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(597,29):
+      see declaration of 'ImGui::DragFloat2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(597,187): error C2572: 'ImGui::DragFloat2': redefinition of default argument: parameter 5
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(597,29):
+      see declaration of 'ImGui::DragFloat2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(598,87): error C2572: 'ImGui::DragFloat3': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(598,29):
+      see declaration of 'ImGui::DragFloat3'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(598,107): error C2572: 'ImGui::DragFloat3': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(598,29):
+      see declaration of 'ImGui::DragFloat3'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(598,127): error C2572: 'ImGui::DragFloat3': redefinition of default argument: parameter 3
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(598,29):
+      see declaration of 'ImGui::DragFloat3'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(598,154): error C2572: 'ImGui::DragFloat3': redefinition of default argument: parameter 4
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(598,29):
+      see declaration of 'ImGui::DragFloat3'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(598,187): error C2572: 'ImGui::DragFloat3': redefinition of default argument: parameter 5
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(598,29):
+      see declaration of 'ImGui::DragFloat3'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(599,87): error C2572: 'ImGui::DragFloat4': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(599,29):
+      see declaration of 'ImGui::DragFloat4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(599,107): error C2572: 'ImGui::DragFloat4': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(599,29):
+      see declaration of 'ImGui::DragFloat4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(599,127): error C2572: 'ImGui::DragFloat4': redefinition of default argument: parameter 3
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(599,29):
+      see declaration of 'ImGui::DragFloat4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(599,154): error C2572: 'ImGui::DragFloat4': redefinition of default argument: parameter 4
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(599,29):
+      see declaration of 'ImGui::DragFloat4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(599,187): error C2572: 'ImGui::DragFloat4': redefinition of default argument: parameter 5
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(599,29):
+      see declaration of 'ImGui::DragFloat4'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(600,124): error C2572: 'ImGui::DragFloatRange2': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(600,29):
+      see declaration of 'ImGui::DragFloatRange2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(600,144): error C2572: 'ImGui::DragFloatRange2': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(600,29):
+      see declaration of 'ImGui::DragFloatRange2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(600,164): error C2572: 'ImGui::DragFloatRange2': redefinition of default argument: parameter 3
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(600,29):
+      see declaration of 'ImGui::DragFloatRange2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(600,191): error C2572: 'ImGui::DragFloatRange2': redefinition of default argument: parameter 4
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(600,29):
+      see declaration of 'ImGui::DragFloatRange2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(600,224): error C2572: 'ImGui::DragFloatRange2': redefinition of default argument: parameter 5
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(600,29):
+      see declaration of 'ImGui::DragFloatRange2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(600,255): error C2572: 'ImGui::DragFloatRange2': redefinition of default argument: parameter 6
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(600,29):
+      see declaration of 'ImGui::DragFloatRange2'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(601,80): error C2572: 'ImGui::DragInt': redefinition of default argument: parameter 1
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(601,29):
+      see declaration of 'ImGui::DragInt'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(601,98): error C2572: 'ImGui::DragInt': redefinition of default argument: parameter 2
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(601,29):
+      see declaration of 'ImGui::DragInt'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(601,113): error C2572: 'ImGui::DragInt': redefinition of default argument: parameter 3
+  (compiling source file 'glapp.cpp')
+      C:\vcpkg\installed\x64-windows\include\imgui.h(601,29):
+      see declaration of 'ImGui::DragInt'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\imgui.h(601,113): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file 'glapp.cpp')
+  
+  gui.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  imguisetup.cpp
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(487,43): error C3646: 'BindTexture': unknown override specifier
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(487,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(502,43): error C3646: 'DeleteTextures': unknown override specifier
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(502,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(507,43): error C3646: 'DrawElements': unknown override specifier
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(507,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(513,43): error C3646: 'GenTextures': unknown override specifier
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(513,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'imguisetup.cpp')
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(621,17): error C2039: 'BindTexture': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(627,17): error C2039: 'DrawElements': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(640,5): error C2039: 'BindTexture': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(691,5): error C2039: 'GenTextures': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(692,5): error C2039: 'BindTexture': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(706,5): error C2039: 'BindTexture': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(717,9): error C2039: 'DeleteTextures': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3.cpp(944,5): error C2039: 'BindTexture': is not a member of 'ImGL3WProcs::<unnamed-type-gl>'
+  (compiling source file 'imguisetup.cpp')
+      D:\Projects\Year 3 Trimester 1 Projects\SeamCarving\Extern\imgui\backends\imgui_impl_opengl3_loader.h(482,12):
+      see declaration of 'ImGL3WProcs::<unnamed-type-gl>'
+  
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  stbloader.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  Generating Code...
