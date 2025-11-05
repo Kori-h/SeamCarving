@@ -18,30 +18,36 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stbloader.cpp">
+    <ClCompile Include="Core\stbloader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="glapp.cpp">
+    <ClCompile Include="Core\glapp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gui.cpp">
+    <ClCompile Include="Core\gui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="imguisetup.cpp">
+    <ClCompile Include="Core\imguisetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SeamCarving\seamcarvingdp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stbloader.hpp">
+    <ClInclude Include="Core\stbloader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="glapp.hpp">
+    <ClInclude Include="Core\glapp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gui.hpp">
+    <ClInclude Include="Core\gui.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SeamCarving\seamcarvingdp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

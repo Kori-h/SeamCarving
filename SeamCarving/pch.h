@@ -15,7 +15,71 @@
 // image loading
 #include <stb_image.h>
 
-// others
+// c++
 #include <iostream>
-#include <filesystem>
 #include <string>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+
+// containers
+union Pixel
+{
+    struct 
+    {
+        unsigned char r, g, b, a;
+    };
+
+    unsigned char data[4];
+};
+
+struct Texture
+{
+    GLuint id;
+    int width;
+    int height;
+    std::vector<Pixel> pixels;
+
+    void SetPixel(int x, int y, Pixel pixel)
+    {
+        if (x < 0 || x >= width || y < 0 || y >= height)
+        {
+            return;
+        }
+
+        pixels[y * width + x] = pixel;
+    }
+
+    Pixel GetPixel(int x, int y) const
+    {
+        x = std::clamp(x, 0, width - 1);
+        y = std::clamp(y, 0, height - 1);
+        return pixels[y * width + x];
+    }
+};
+
+template <typename T>
+struct Grid 
+{
+    int width, height;
+    std::vector<T> data;
+
+    Grid(int w, int h, T defaultValue = T{}) : width(w), height(h), data(w * h, defaultValue)
+    {
+
+    }
+
+    T& operator()(int x, int y) 
+    {
+        x = std::clamp(x, 0, width - 1);
+        y = std::clamp(y, 0, height - 1);
+        return data[y * width + x];
+    }
+
+    T const& operator()(int x, int y) const 
+    {
+        x = std::clamp(x, 0, width - 1);
+        y = std::clamp(y, 0, height - 1);
+        return data[y * width + x];
+    }
+};

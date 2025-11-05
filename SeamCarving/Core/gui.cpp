@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "../pch.h"
 #include "gui.hpp"
 
 GUI::GUI(GLFWwindow* window)
@@ -6,10 +6,13 @@ GUI::GUI(GLFWwindow* window)
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     ImGui::StyleColorsDark();
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 130");
+
+    std::cout << "ImGUI initialised" << std::endl;
 }
 
 void GUI::Shutdown()
@@ -24,6 +27,7 @@ void GUI::NewFrame()
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
+    ImGui::DockSpaceOverViewport();
 }
 
 void GUI::EndFrame()
