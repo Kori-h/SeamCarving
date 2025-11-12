@@ -8,6 +8,9 @@
 // seam carving using dynamic programming
 #include "SeamCarving/seamcarvingdp.hpp"
 
+// seam carving using greedy algorithm
+#include "SeamCarving/seamcarvinggreedy.hpp"
+
 int main() 
 {
     GLApp app(1280, 720, "Seam Carving Demo (Algorithm Analysis)");

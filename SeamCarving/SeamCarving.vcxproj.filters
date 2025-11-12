@@ -33,6 +33,9 @@
     <ClCompile Include="SeamCarving\seamcarvingdp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SeamCarving\seamcarvinggreedy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\stbloader.hpp">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SeamCarving\seamcarvingdp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SeamCarving\seamcarvinggreedy.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

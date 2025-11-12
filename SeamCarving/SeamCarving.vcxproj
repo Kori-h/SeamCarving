@@ -163,6 +163,7 @@ xcopy /Y /I "$(SolutionDir)Extern\glew\lib\glew32.dll" "$(OutDir)"</Command>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SeamCarving\seamcarvingdp.cpp" />
     <ClCompile Include="Core\stbloader.cpp" />
+    <ClCompile Include="SeamCarving\seamcarvinggreedy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\glapp.hpp" />
@@ -170,6 +171,7 @@ xcopy /Y /I "$(SolutionDir)Extern\glew\lib\glew32.dll" "$(OutDir)"</Command>
     <ClInclude Include="pch.h" />
     <ClInclude Include="SeamCarving\seamcarvingdp.hpp" />
     <ClInclude Include="Core\stbloader.hpp" />
+    <ClInclude Include="SeamCarving\seamcarvinggreedy.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
