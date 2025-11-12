@@ -73,6 +73,22 @@ int main()
                 UpdateTexture(texture);
             }
 
+            if (ImGui::Button("Remove Horizontal (Greedy)"))
+            {
+                Grid<float> energy = DP::ComputeEnergy(texture); // same energy computation
+                std::vector<int> seam = Greedy::FindHorizontalSeam_Greedy(energy);
+                Greedy::RemoveHorizontalSeam(texture, seam);
+                UpdateTexture(texture);
+            }
+
+            if (ImGui::Button("Remove Vertical (Greedy)"))
+            {
+                Grid<float> energy = DP::ComputeEnergy(texture);
+                std::vector<int> seam = Greedy::FindVerticalSeam_Greedy(energy);
+                Greedy::RemoveVerticalSeam(texture, seam);
+                UpdateTexture(texture);
+            }
+
             if (ImGui::Button("Remove Lowest Energy Seam (DP)"))
             {
                 Grid<float> energy = DP::ComputeEnergy(texture);
