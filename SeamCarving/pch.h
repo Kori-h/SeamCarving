@@ -21,6 +21,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <iomanip>
 
 // containers
 union Pixel
