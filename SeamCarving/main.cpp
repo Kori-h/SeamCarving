@@ -29,6 +29,10 @@ int main()
         gui.NewFrame();
 
         ImGui::BeginDisabled(isProcessing);
+
+        // ======================
+        //      IMAGE WINDOW
+        // ======================
         ImGui::Begin("Image", nullptr, ImGuiWindowFlags_HorizontalScrollbar);
         {
             static float zoom = 1.0f;
@@ -43,6 +47,9 @@ int main()
         }
         ImGui::End();
 
+        // ======================
+        //      IMAGE CONTROLS
+        // ======================
         ImGui::Begin("Image Controls");
         {
             ImGui::InputText("Texture Path", texturePath, IM_ARRAYSIZE(texturePath));
@@ -55,6 +62,9 @@ int main()
         }
         ImGui::End();
 
+        // ======================
+        //      BASIC CONTROLS
+        // ======================
         ImGui::Begin("Basic Controls");
         {
             if (ImGui::Button("Remove Horizontal (DP)"))
@@ -103,6 +113,9 @@ int main()
         }
         ImGui::End();
       
+        // ======================
+        //      RESIZE CONTROLS
+        // ======================
         ImGui::Begin("Resize Controls (DP)");
         {
             static bool isResizing = false;
@@ -115,7 +128,7 @@ int main()
             targetWidth = std::clamp(targetWidth, 1, texture.width);
             targetHeight = std::clamp(targetHeight, 1, texture.height);
 
-            if (ImGui::Button("Resize Image"))
+            if (ImGui::Button("Resize Image (DP)"))
             {
                 isResizing = true;
                 isProcessing = true; 
@@ -156,6 +169,150 @@ int main()
             }
         }
         ImGui::End();
+
+        ImGui::Begin("Resize Controls (Greedy)");
+        {
+            static bool isResizingGreedy = false;
+            static int  targetWidthGreedy = texture.width;
+            static int  targetHeightGreedy = texture.height;
+
+            ImGui::InputInt("Target Width (Greedy)", &targetWidthGreedy);
+            ImGui::InputInt("Target Height (Greedy)", &targetHeightGreedy);
+
+            targetWidthGreedy = std::clamp(targetWidthGreedy, 1, texture.width);
+            targetHeightGreedy = std::clamp(targetHeightGreedy, 1, texture.height);
+
+            if (ImGui::Button("Resize Image (Greedy)"))
+            {
+                isResizingGreedy = true;
+                isProcessing = true;
+            }
+
+            // remove several greedy seams per frame so it’s not painfully slow
+            const int seamsPerFrameGreedy = 5;   // tweak this (1 = slow, 10+ = fast)
+
+            if (isResizingGreedy)
+            {
+                int seamsDone = 0;
+
+                while (seamsDone < seamsPerFrameGreedy &&
+                    (texture.width > targetWidthGreedy ||
+                        texture.height > targetHeightGreedy))
+                {
+                    Grid<float> energy = DP::ComputeEnergy(texture);
+
+                    std::vector<int> vSeam;
+                    std::vector<int> hSeam;
+                    float vEnergy = std::numeric_limits<float>::max();
+                    float hEnergy = std::numeric_limits<float>::max();
+
+                    // Greedy vertical seam if we still need to shrink width
+                    if (texture.width > targetWidthGreedy)
+                    {
+                        vSeam = Greedy::FindVerticalSeam_Greedy(energy);
+                        vEnergy = DP::CalculateVerticalSeamEnergy(energy, vSeam);
+                    }
+
+                    // Greedy horizontal seam if we still need to shrink height
+                    if (texture.height > targetHeightGreedy)
+                    {
+                        hSeam = Greedy::FindHorizontalSeam_Greedy(energy);
+                        hEnergy = DP::CalculateHorizontalSeamEnergy(energy, hSeam);
+                    }
+
+                    if (vEnergy == std::numeric_limits<float>::max() &&
+                        hEnergy == std::numeric_limits<float>::max())
+                    {
+                        break;
+                    }
+
+                    if (vEnergy < hEnergy)
+                        Greedy::RemoveVerticalSeam(texture, vSeam);
+                    else
+                        Greedy::RemoveHorizontalSeam(texture, hSeam);
+
+                    ++seamsDone;
+                }
+
+                if (seamsDone > 0)
+                    UpdateTexture(texture); // updates image as we go
+
+                if (texture.width <= targetWidthGreedy &&
+                    texture.height <= targetHeightGreedy)
+                {
+                    std::cout << "Greedy resizing completed. Final size: "
+                        << texture.width << "x" << texture.height << std::endl;
+                    isProcessing = false;
+                    isResizingGreedy = false;
+                }
+            }
+        }
+        ImGui::End();
+
+        //ImGui::Begin("Resize Controls (Greedy)");
+        //{
+        //    static bool isResizingGreedy = false;
+        //    static int targetWidthGreedy = texture.width;
+        //    static int targetHeightGreedy = texture.height;
+
+        //    ImGui::InputInt("Target Width (Greedy)", &targetWidthGreedy);
+        //    ImGui::InputInt("Target Height (Greedy)", &targetHeightGreedy);
+
+        //    // Clamp so we never ask to enlarge the image
+        //    targetWidthGreedy = std::clamp(targetWidthGreedy, 1, texture.width);
+        //    targetHeightGreedy = std::clamp(targetHeightGreedy, 1, texture.height);
+
+        //    if (ImGui::Button("Resize Image (Greedy)"))
+        //    {
+        //        // Do the whole resize in one go (no per-frame animation)
+        //        while ((texture.width > targetWidthGreedy) ||
+        //            (texture.height > targetHeightGreedy))
+        //        {
+        //            Grid<float> energy = DP::ComputeEnergy(texture);
+
+        //            std::vector<int> vSeam;
+        //            std::vector<int> hSeam;
+        //            float vEnergy = std::numeric_limits<float>::max();
+        //            float hEnergy = std::numeric_limits<float>::max();
+
+        //            // Only consider vertical seam if we still need to shrink width
+        //            if (texture.width > targetWidthGreedy)
+        //            {
+        //                vSeam = Greedy::FindVerticalSeam_Greedy(energy);
+        //                vEnergy = DP::CalculateVerticalSeamEnergy(energy, vSeam);
+        //            }
+
+        //            // Only consider horizontal seam if we still need to shrink height
+        //            if (texture.height > targetHeightGreedy)
+        //            {
+        //                hSeam = Greedy::FindHorizontalSeam_Greedy(energy);
+        //                hEnergy = DP::CalculateHorizontalSeamEnergy(energy, hSeam);
+        //            }
+
+        //            // If neither is valid, we’re done
+        //            if (vEnergy == std::numeric_limits<float>::max() &&
+        //                hEnergy == std::numeric_limits<float>::max())
+        //            {
+        //                break;
+        //            }
+
+        //            // Remove whichever seam has lower total energy (still a valid “resize” policy)
+        //            if (vEnergy < hEnergy)
+        //                Greedy::RemoveVerticalSeam(texture, vSeam);
+        //            else
+        //                Greedy::RemoveHorizontalSeam(texture, hSeam);
+        //        }
+
+        //        // Single upload at the end = much faster than per-seam updates
+        //        UpdateTexture(texture);
+
+        //        std::cout << "Greedy resizing completed. Final size: "
+        //            << texture.width << "x" << texture.height << std::endl;
+        //    }
+        //}
+        //ImGui::End();
+
+
         ImGui::EndDisabled();
 
         gui.EndFrame();
