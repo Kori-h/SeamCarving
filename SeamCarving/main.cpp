@@ -44,8 +44,34 @@ int main()
         {
             ImGui::InputText("Texture Path", texturePath, IM_ARRAYSIZE(texturePath));
 
+            if (ImGui::Button("Export Image"))
+            {
+                std::string exportedPath = texturePath;
+                size_t divider = exportedPath.find_last_of('.');
+                exportedPath.insert(divider, "_exported");
+                SaveTextureAsPNG(texture, exportedPath);
+            }
+
             if (ImGui::Button("Reload Image"))
             {
+                texture = LoadTexture(texturePath);
+                UpdateTexture(texture);
+            }
+
+            if (ImGui::Button("Load Default Image"))
+            {
+                char const* target = "Assets/sample.jpg";
+                std::size_t length = std::strlen(target) + 1;
+                std::copy(target, target + length, texturePath);
+                texture = LoadTexture(texturePath);
+                UpdateTexture(texture);
+            }
+
+            if (ImGui::Button("Load Default Image (Low Resolution)"))
+            {
+                char const* target = "Assets/lowres.jpg";
+                std::size_t length = std::strlen(target) + 1;
+                std::copy(target, target + length, texturePath);
                 texture = LoadTexture(texturePath);
                 UpdateTexture(texture);
             }
