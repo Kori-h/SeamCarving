@@ -60,3 +60,12 @@ bool SaveTextureAsPNG(Texture const& texture, std::string const& filename)
 
     return result != 0;
 }
+
+void DeleteTexture(Texture& texture)
+{
+    if (texture.id != 0)
+    {
+        glDeleteTextures(1, &texture.id);
+        texture.id = 0;
+    }
+}

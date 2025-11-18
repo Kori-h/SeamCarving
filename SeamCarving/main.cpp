@@ -18,11 +18,11 @@ int main()
 {
     GLApp app(1280, 720, "Seam Carving Demo (Algorithm Analysis)");
     GUI gui(app.window);
-
+    
     static char texturePath[256] = "Assets/sample.jpg";
     Texture texture = LoadTexture(texturePath);
     UpdateTexture(texture);
-
+    
     static bool isProcessing = false;
 
     while (app.IsRunning())
@@ -382,6 +382,7 @@ int main()
     }
 
     // clean up
+    DeleteTexture(texture);
     gui.Shutdown();
     app.Shutdown();
     return 0;

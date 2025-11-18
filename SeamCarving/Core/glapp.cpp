@@ -32,13 +32,18 @@ GLApp::GLApp(int width, int height, std::string const& name)
 
 void GLApp::Shutdown()
 {
-    glfwDestroyWindow(window);
+    if (window) 
+    {
+        glfwDestroyWindow(window);
+        window = nullptr;
+    }
+
     glfwTerminate();
 }
 
 bool GLApp::IsRunning()
 {
-    return !glfwWindowShouldClose(window);
+    return window && !glfwWindowShouldClose(window);
 }
 
 void GLApp::ClearFrame()
