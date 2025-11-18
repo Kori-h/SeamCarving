@@ -3,7 +3,7 @@
 
 namespace Greedy
 {
-    std::vector<int> FindVerticalSeam_Greedy(Grid<float> const& energy)
+    std::vector<int> FindVerticalSeamGreedy(Grid<float> const& energy)
     {
         int width = energy.width;
         int height = energy.height;
@@ -47,35 +47,8 @@ namespace Greedy
 
         return seam;
     }
-    void RemoveVerticalSeam(Texture& texture, std::vector<int> const& seam)
-    {
-        if (texture.width <= 1)
-        {
-            std::cerr << "Cannot remove vertical seam, image is too small!" << std::endl;
-            return;
-        }
 
-        std::vector<Pixel> newPixels((texture.width - 1) * texture.height);
-
-        for (int y = 0; y < texture.height; ++y)
-        {
-            int k = 0;
-            for (int x = 0; x < texture.width; ++x)
-            {
-                if (x != seam[y])
-                {
-                    newPixels[y * (texture.width - 1) + k] = texture.pixels[y * texture.width + x];
-                    ++k;
-                }
-            }
-        }
-
-        --texture.width;
-        texture.pixels = std::move(newPixels);
-        std::cout << "Removed vertical seam. New size: " << texture.width << "x" << texture.height << std::endl;
-    }
-
-    std::vector<int> FindHorizontalSeam_Greedy(Grid<float> const& energy)
+    std::vector<int> FindHorizontalSeamGreedy(Grid<float> const& energy)
     {
         int width = energy.width;
         int height = energy.height;
@@ -118,33 +91,5 @@ namespace Greedy
         }
 
         return seam;
-    }
-
-    void RemoveHorizontalSeam(Texture& texture, std::vector<int> const& seam)
-    {
-        if (texture.height <= 1)
-        {
-            std::cerr << "Cannot remove horizontal seam, image is too small!" << std::endl;
-            return;
-        }
-
-        std::vector<Pixel> newPixels(texture.width * (texture.height - 1));
-
-        for (int x = 0; x < texture.width; ++x)
-        {
-            int k = 0;
-            for (int y = 0; y < texture.height; ++y)
-            {
-                if (y != seam[x])
-                {
-                    newPixels[k * texture.width + x] = texture.pixels[y * texture.width + x];
-                    k++;
-                }
-            }
-        }
-
-        --texture.height;
-        texture.pixels = std::move(newPixels);
-        std::cout << "Removed horizontal seam. New size: " << texture.width << "x" << texture.height << std::endl;
     }
 }

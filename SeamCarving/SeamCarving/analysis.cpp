@@ -37,7 +37,7 @@ namespace Analysis
         std::chrono::duration<double, std::milli> elapsed = end - start;
 
         metrics.computationTimeMs = elapsed.count();
-        metrics.seamEnergy = Greedy::CalculateVerticalSeamEnergy(energy, outSeam);
+        metrics.seamEnergy = DP::CalculateVerticalSeamEnergy(energy, outSeam);
 
         // Memory estimation: only stores the seam path (height * sizeof(int))
         metrics.memoryUsed = energy.height * sizeof(int);
@@ -77,7 +77,7 @@ namespace Analysis
         std::chrono::duration<double, std::milli> elapsed = end - start;
 
         metrics.computationTimeMs = elapsed.count();
-        metrics.seamEnergy = Greedy::CalculateHorizontalSeamEnergy(energy, outSeam);
+        metrics.seamEnergy = DP::CalculateHorizontalSeamEnergy(energy, outSeam);
 
         // Memory estimation: only stores the seam path
         metrics.memoryUsed = energy.width * sizeof(int);
