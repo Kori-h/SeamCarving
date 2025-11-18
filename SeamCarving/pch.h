@@ -26,6 +26,7 @@
 #include <cmath>
 #include <algorithm>
 #include <cstring>
+#include <iomanip>
 
 // containers
 union Pixel

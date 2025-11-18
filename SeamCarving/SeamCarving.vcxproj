@@ -161,6 +161,7 @@ xcopy /Y /I "$(SolutionDir)Extern\glew\lib\glew32.dll" "$(OutDir)"</Command>
     <ClCompile Include="Core\gui.cpp" />
     <ClCompile Include="Core\imguisetup.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SeamCarving\analysis.cpp" />
     <ClCompile Include="SeamCarving\seamcarvingdp.cpp" />
     <ClCompile Include="Core\stbloader.cpp" />
     <ClCompile Include="SeamCarving\seamcarvinggreedy.cpp" />
@@ -169,6 +170,7 @@ xcopy /Y /I "$(SolutionDir)Extern\glew\lib\glew32.dll" "$(OutDir)"</Command>
     <ClInclude Include="Core\glapp.hpp" />
     <ClInclude Include="Core\gui.hpp" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="SeamCarving\analysis.hpp" />
     <ClInclude Include="SeamCarving\seamcarvingdp.hpp" />
     <ClInclude Include="Core\stbloader.hpp" />
     <ClInclude Include="SeamCarving\seamcarvinggreedy.hpp" />

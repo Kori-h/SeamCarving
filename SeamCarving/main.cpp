@@ -11,11 +11,14 @@
 // seam carving using greedy algorithm
 #include "SeamCarving/seamcarvinggreedy.hpp"
 
-int main() 
+// analysis and comparison tools
+#include "SeamCarving/analysis.hpp"
+
+int main()
 {
     GLApp app(1280, 720, "Seam Carving Demo (Algorithm Analysis)");
     GUI gui(app.window);
-    
+
     static char texturePath[256] = "Assets/sample.jpg";
     Texture texture = LoadTexture(texturePath);
     UpdateTexture(texture);
@@ -88,9 +91,6 @@ int main()
         }
         ImGui::End();
 
-        // ======================
-        //      BASIC CONTROLS
-        // ======================
         ImGui::Begin("Basic Controls");
         {
             if (ImGui::Button("Remove Horizontal (DP)"))
@@ -101,11 +101,23 @@ int main()
                 UpdateTexture(texture);
             }
 
-            if (ImGui::Button("Remove Vertical (DP)")) 
+            if (ImGui::Button("Remove Vertical (DP)"))
             {
                 Grid<float> energy = DP::ComputeEnergy(texture);
                 std::vector<int> seam = DP::FindVerticalSeam(energy);
                 DP::RemoveVerticalSeam(texture, seam);
+                UpdateTexture(texture);
+            }
+            
+            if (ImGui::Button("Remove Lowest Energy Seam (DP)"))
+            {
+                Grid<float> energy = DP::ComputeEnergy(texture);
+                auto vSeam = DP::FindVerticalSeam(energy);
+                auto hSeam = DP::FindHorizontalSeam(energy);
+                float vEnergy = DP::CalculateVerticalSeamEnergy(energy, vSeam);
+                float hEnergy = DP::CalculateHorizontalSeamEnergy(energy, hSeam);
+                if (vEnergy < hEnergy) DP::RemoveVerticalSeam(texture, vSeam);
+                else DP::RemoveHorizontalSeam(texture, hSeam);
                 UpdateTexture(texture);
             }
 
@@ -125,23 +137,100 @@ int main()
                 UpdateTexture(texture);
             }
 
-            if (ImGui::Button("Remove Lowest Energy Seam (DP)"))
+            if (ImGui::Button("Remove Lowest Energy Seam (Greedy)"))
             {
                 Grid<float> energy = DP::ComputeEnergy(texture);
-                auto vSeam = DP::FindVerticalSeam(energy);
-                auto hSeam = DP::FindHorizontalSeam(energy);
+                auto vSeam = Greedy::FindVerticalSeam_Greedy(energy);
+                auto hSeam = Greedy::FindHorizontalSeam_Greedy(energy);
                 float vEnergy = DP::CalculateVerticalSeamEnergy(energy, vSeam);
                 float hEnergy = DP::CalculateHorizontalSeamEnergy(energy, hSeam);
-                if (vEnergy < hEnergy) DP::RemoveVerticalSeam(texture, vSeam);
-                else DP::RemoveHorizontalSeam(texture, hSeam);
+                if (vEnergy < hEnergy) Greedy::RemoveVerticalSeam(texture, vSeam);
+                else Greedy::RemoveHorizontalSeam(texture, hSeam);
                 UpdateTexture(texture);
-            } 
+            }
         }
         ImGui::End();
-      
-        // ======================
-        //      RESIZE CONTROLS
-        // ======================
+
+        ImGui::Begin("Analysis & Comparison");
+        {
+            ImGui::Text("Compare DP vs Greedy Performance");
+            ImGui::Separator();
+
+            if (ImGui::Button("Analyze Vertical Seam"))
+            {
+                Grid<float> energy = DP::ComputeEnergy(texture);
+
+                std::vector<int> dpSeam, greedySeam;
+
+                auto dpMetrics = Analysis::MeasureDPVerticalSeam(energy, dpSeam);
+                auto greedyMetrics = Analysis::MeasureGreedyVerticalSeam(energy, greedySeam);
+
+                Analysis::PrintComparisonTable(dpMetrics, greedyMetrics, "Vertical Seam");
+                Analysis::CompareSeams(dpSeam, greedySeam, "DP", "Greedy");
+            }
+
+            if (ImGui::Button("Analyze Horizontal Seam"))
+            {
+                Grid<float> energy = DP::ComputeEnergy(texture);
+
+                std::vector<int> dpSeam, greedySeam;
+
+                auto dpMetrics = Analysis::MeasureDPHorizontalSeam(energy, dpSeam);
+                auto greedyMetrics = Analysis::MeasureGreedyHorizontalSeam(energy, greedySeam);
+
+                Analysis::PrintComparisonTable(dpMetrics, greedyMetrics, "Horizontal Seam");
+                Analysis::CompareSeams(dpSeam, greedySeam, "DP", "Greedy");
+            }
+
+            ImGui::Separator();
+            ImGui::Text("Theoretical Analysis (Question 2a)");
+
+            static int analysisRows = 10;
+            static int analysisCols = 10;
+
+            ImGui::InputInt("Rows (m)", &analysisRows);
+            ImGui::InputInt("Cols (n)", &analysisCols);
+
+            analysisRows = std::clamp(analysisRows, 1, 100);
+            analysisCols = std::clamp(analysisCols, 1, 100);
+
+            if (ImGui::Button("Calculate Possible Seams"))
+            {
+                std::cout << "\n=== Theoretical Analysis: Number of Possible Seams ===" << std::endl;
+                std::cout << "Image dimensions: " << analysisRows << " rows x " << analysisCols << " cols" << std::endl;
+
+                if (analysisRows <= 20)
+                {
+                    unsigned long long count = Analysis::CountPossibleSeams(analysisRows, analysisCols);
+                    std::cout << "Exact count: " << count << " possible seams" << std::endl;
+                }
+
+                double logCount = Analysis::EstimatePossibleSeamsLog(analysisRows, analysisCols);
+                std::cout << "Number of possible seams ? 10^" << logCount << std::endl;
+
+                // Show exponential growth
+                std::cout << "\nExponential Growth Demonstration:" << std::endl;
+                for (int m = 2; m <= std::min(25, analysisRows); m += 2)
+                {
+                    if (m <= 20)
+                    {
+                        unsigned long long c = Analysis::CountPossibleSeams(m, analysisCols);
+                        std::cout << "  m=" << m << ": " << c << " seams" << std::endl;
+                    }
+                    else
+                    {
+                        double logC = Analysis::EstimatePossibleSeamsLog(m, analysisCols);
+                        std::cout << "  m=" << m << ": ~10^" << logC << " seams" << std::endl;
+                    }
+                }
+
+                // Lower bound: at least 2^(m-1)
+                std::cout << "\nLower bound: At least 2^(m-1) = 2^" << (analysisRows - 1)
+                    << " ? 10^" << ((analysisRows - 1) * std::log10(2)) << std::endl;
+            }
+        }
+        ImGui::End();
+
         ImGui::Begin("Resize Controls (DP)");
         {
             static bool isResizing = false;
@@ -157,7 +246,7 @@ int main()
             if (ImGui::Button("Resize Image (DP)"))
             {
                 isResizing = true;
-                isProcessing = true; 
+                isProcessing = true;
             }
 
             if (isResizing)
@@ -191,7 +280,7 @@ int main()
                     std::cout << "Resizing completed. Final size: " << texture.width << "x" << texture.height << std::endl;
                     isProcessing = false;
                     isResizing = false;
-                }            
+                }
             }
         }
         ImGui::End();
@@ -214,7 +303,7 @@ int main()
                 isProcessing = true;
             }
 
-            // remove several greedy seams per frame so it’s not painfully slow
+            // remove several greedy seams per frame so itï¿½s not painfully slow
             const int seamsPerFrameGreedy = 5;   // tweak this (1 = slow, 10+ = fast)
 
             if (isResizingGreedy)
@@ -315,14 +404,14 @@ int main()
         //                hEnergy = DP::CalculateHorizontalSeamEnergy(energy, hSeam);
         //            }
 
-        //            // If neither is valid, we’re done
+        //            // If neither is valid, weï¿½re done
         //            if (vEnergy == std::numeric_limits<float>::max() &&
         //                hEnergy == std::numeric_limits<float>::max())
         //            {
         //                break;
         //            }
 
-        //            // Remove whichever seam has lower total energy (still a valid “resize” policy)
+        //            // Remove whichever seam has lower total energy (still a valid ï¿½resizeï¿½ policy)
         //            if (vEnergy < hEnergy)
         //                Greedy::RemoveVerticalSeam(texture, vSeam);
         //            else
@@ -344,7 +433,7 @@ int main()
         gui.EndFrame();
         app.Render();
     }
-    
+
     // clean up
     gui.Shutdown();
     app.Shutdown();
