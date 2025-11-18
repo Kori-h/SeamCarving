@@ -14,6 +14,10 @@
 
 // image loading
 #include <stb_image.h>
+#pragma warning(push)
+#pragma warning(disable : 4996) // disable specific warning when including this lib
+#include <stb_image_write.h>
+#pragma warning(pop)
 
 // c++
 #include <iostream>
@@ -21,6 +25,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <cstring>
 
 // containers
 union Pixel
